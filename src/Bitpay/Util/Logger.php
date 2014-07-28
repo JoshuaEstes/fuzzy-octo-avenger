@@ -1,8 +1,10 @@
 <?php
 
+namespace Bitpay\Util;
+
 /**
  * @see https://github.com/php-fig/log
  */
-class Bitpay_Util_Logger
+class Logger
 {
 }

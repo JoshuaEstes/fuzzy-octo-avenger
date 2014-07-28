@@ -1,6 +1,8 @@
 <?php
 
-class Bitpay_Util_EllipticCurve
+namespace Bitpay\Util;
+
+class EllipticCurve
 {
     protected $G;
 

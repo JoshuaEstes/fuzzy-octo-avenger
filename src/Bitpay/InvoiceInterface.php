@@ -1,9 +1,11 @@
 <?php
 
+namespace Bitpay;
+
 /**
  * Invoice
  */
-interface Bitpay_InvoiceInterface
+interface InvoiceInterface
 {
 
     /**
@@ -74,12 +76,12 @@ interface Bitpay_InvoiceInterface
     public function getPrice();
 
     /**
-     * @return Bitpay_CurrencyInterface
+     * @return CurrencyInterface
      */
     public function getCurrency();
 
     /**
-     * @return Bitpay_ItemInterface
+     * @return ItemInterface
      */
     public function getItem();
 
@@ -149,7 +151,7 @@ interface Bitpay_InvoiceInterface
     public function getCurrentTime();
 
     /**
-     * Wrappers for Bitpay_ItemInterface
+     * Wrappers for ItemInterface
      *
      * @deprecated
      */
@@ -159,7 +161,7 @@ interface Bitpay_InvoiceInterface
     public function isPhysical();
 
     /**
-     * Wrapper functions for Bitpay_BuyerInterface
+     * Wrapper functions for BuyerInterface
      *
      * @deprecated
      */

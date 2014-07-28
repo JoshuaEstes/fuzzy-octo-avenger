@@ -1,6 +1,10 @@
 <?php
 
-interface Bitpay_PayoutInterface
+namespace Bitpay;
+
+/**
+ */
+interface PayoutInterface
 {
 
     /**

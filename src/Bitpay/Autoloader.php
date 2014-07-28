@@ -1,8 +1,14 @@
 <?php
 
-class Bitpay_Autoloader
+namespace Bitpay;
+
+/**
+ */
+class Autoloader
 {
 
+    /**
+     */
     public static function register()
     {
     }

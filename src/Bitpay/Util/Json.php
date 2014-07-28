@@ -1,6 +1,8 @@
 <?php
 
-class Bitpay_Util_Json
+namespace Bitpay\Util;
+
+class Json
 {
 
     public static function encode($data)

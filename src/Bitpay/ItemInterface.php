@@ -1,9 +1,11 @@
 <?php
 
+namespace Bitpay;
+
 /**
  * Item that was sold
  */
-interface Bitpay_ItemInterface
+interface ItemInterface
 {
 
     /**

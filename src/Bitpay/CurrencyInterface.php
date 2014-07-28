@@ -1,8 +1,10 @@
 <?php
 
+namespace Bitpay;
+
 /**
  */
-interface Bitpay_CurrencyInterface
+interface CurrencyInterface
 {
 
     /**

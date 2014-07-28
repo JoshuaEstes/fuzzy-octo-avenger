@@ -1,5 +1,9 @@
 <?php
 
-interface Bitpay_TokenInterface
+namespace Bitpay;
+
+/**
+ */
+interface TokenInterface
 {
 }

@@ -1,9 +1,11 @@
 <?php
 
+namespace Bitpay;
+
 /**
  * Creates a bill for the calling merchant
  */
-interface Bitpay_BillInterface
+interface BillInterface
 {
 
     /**
@@ -12,7 +14,7 @@ interface Bitpay_BillInterface
     public function getItems();
 
     /**
-     * @return Bitpay_Currency
+     * @return Currency
      */
     public function getCurrency();
 

@@ -1,13 +1,15 @@
 <?php
 
+namespace Bitpay;
+
 /**
  * Exchange rate
  */
-interface Bitpay_RateInterface
+interface RateInterface
 {
 
     /**
-     * @return Bitpay_Currency
+     * @return Currency
      */
     public function getCurrency();
 
