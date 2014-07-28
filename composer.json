@@ -3,6 +3,11 @@
     "description": "PHP Library to work with the new Bitpay API",
     "license": "MIT",
     "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
     "require": {
         "psr/log": "~1.0"
     },
