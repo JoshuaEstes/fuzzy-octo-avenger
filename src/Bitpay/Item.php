@@ -10,7 +10,7 @@ class Item implements ItemInterface
     /**
      * @var string
      */
-    protected $itemCode;
+    protected $code;
 
     /**
      * @var string
@@ -42,19 +42,19 @@ class Item implements ItemInterface
     /**
      * @inheritdoc
      */
-    public function getItemCode()
+    public function getCode()
     {
-        return $this->itemCode;
+        return $this->code;
     }
 
     /**
-     * @param string $itemCode
+     * @param string $code
      *
      * @return ItemInterface
      */
-    public function setItemCode($itemCode)
+    public function setCode($code)
     {
-        $this->itemCode = $itemCode;
+        $this->code = $code;
 
         return $this;
     }

@@ -13,18 +13,18 @@ class ItemTest extends \PHPUnit_Framework_TestCase
         $this->item = new Item();
     }
 
-    public function testGetItemCode()
+    public function testGetCode()
     {
-        $this->assertNull($this->item->getItemCode());
+        $this->assertNull($this->item->getCode());
     }
 
     /**
-     * @depends testGetItemCode
+     * @depends testGetCode
      */
-    public function testSetItemCode()
+    public function testSetCode()
     {
-        $this->item->setItemCode('ItemCode');
-        $this->assertSame('ItemCode', $this->item->getItemCode());
+        $this->item->setCode('Code');
+        $this->assertSame('Code', $this->item->getCode());
     }
 
     public function testGetDescription()
