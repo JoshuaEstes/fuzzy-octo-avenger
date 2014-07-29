@@ -13,5 +13,5 @@ interface AddressInterface
     public function generateAddress();
     public function isValid();
     public function hash160ToAddress($hash, $addressVersion = self::LIVENET);
-    public function addresToHash160($address);
+    public function addressToHash160($address);
 }
