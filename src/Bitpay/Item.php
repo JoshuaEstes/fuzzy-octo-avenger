@@ -33,43 +33,18 @@ class Item implements ItemInterface
     protected $physical;
 
     /**
+     */
+    public function __construct()
+    {
+        $this->physical = false;
+    }
+
+    /**
      * @inheritdoc
      */
     public function getItemCode()
     {
         return $this->itemCode;
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function getQuantity()
-    {
-        return $this->quantity;
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function isPhysical()
-    {
-        return $this->physical;
     }
 
     /**
@@ -85,6 +60,14 @@ class Item implements ItemInterface
     }
 
     /**
+     * @inheritdoc
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
      * @param string $description
      *
      * @return ItemInterface
@@ -97,6 +80,14 @@ class Item implements ItemInterface
     }
 
     /**
+     * @inheritdoc
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
      * @param float $price
      *
      * @return ItemInterface
@@ -106,6 +97,34 @@ class Item implements ItemInterface
         $this->price = $price;
 
         return $this;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getQuantity()
+    {
+        return $this->quantity;
+    }
+
+    /**
+     * @param integer $quantity
+     *
+     * @return ItemInterface
+     */
+    public function setQuantity($quantity)
+    {
+        $this->quantity = $quantity;
+
+        return $this;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function isPhysical()
+    {
+        return $this->physical;
     }
 
     /**

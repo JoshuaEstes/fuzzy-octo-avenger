@@ -7,24 +7,79 @@ namespace Bitpay;
 class Bill implements BillInterface
 {
 
+    /**
+     * @var array
+     */
     protected $items;
+
+    /**
+     * @var CurrencyInterface
+     */
     protected $currency;
+
+    /**
+     * @var string
+     */
     protected $name;
+
+    /**
+     * @var string
+     */
     protected $city;
+
+    /**
+     * @var string
+     */
     protected $state;
+
+    /**
+     * @var string
+     */
     protected $zip;
+
+    /**
+     * @var string
+     */
     protected $country;
+
+    /**
+     * @var string
+     */
     protected $email;
+
+    /**
+     * @var string
+     */
     protected $phone;
+
+    /**
+     * @var string
+     */
     protected $status;
+
+    /**
+     * @var string
+     */
     protected $showRate;
+
+    /**
+     * @var string
+     */
     protected $archived;
+
+    /**
+     */
+    public function __construct()
+    {
+        $this->items = array();
+    }
 
     /**
      * @inheritdoc
      */
     public function getItems()
     {
+        return $this->items;
     }
 
     /**
@@ -32,6 +87,7 @@ class Bill implements BillInterface
      */
     public function getCurrency()
     {
+        return $this->currency;
     }
 
     /**
@@ -39,6 +95,7 @@ class Bill implements BillInterface
      */
     public function getName()
     {
+        return $this->name;
     }
 
     /**
@@ -46,6 +103,7 @@ class Bill implements BillInterface
      */
     public function getAddress()
     {
+        return $this->address;
     }
 
     /**
@@ -53,6 +111,7 @@ class Bill implements BillInterface
      */
     public function getCity()
     {
+        return $this->city;
     }
 
     /**
@@ -60,6 +119,7 @@ class Bill implements BillInterface
      */
     public function getState()
     {
+        return $this->state;
     }
 
     /**
@@ -67,6 +127,7 @@ class Bill implements BillInterface
      */
     public function getZip()
     {
+        return $this->zip;
     }
 
     /**
@@ -74,6 +135,7 @@ class Bill implements BillInterface
      */
     public function getCountry()
     {
+        return $this->country;
     }
 
     /**
@@ -81,6 +143,7 @@ class Bill implements BillInterface
      */
     public function getEmail()
     {
+        return $this->email;
     }
 
     /**
@@ -88,6 +151,7 @@ class Bill implements BillInterface
      */
     public function getPhone()
     {
+        return $this->phone;
     }
 
     /**
@@ -95,6 +159,7 @@ class Bill implements BillInterface
      */
     public function getStatus()
     {
+        return $this->status;
     }
 
     /**
@@ -102,6 +167,7 @@ class Bill implements BillInterface
      */
     public function getShowRate()
     {
+        return $this->showRate;
     }
 
     /**
@@ -109,5 +175,97 @@ class Bill implements BillInterface
      */
     public function getArchived()
     {
+        return $this->archived;
+    }
+
+    public function addItem(ItemInterface $item)
+    {
+        $this->item[] = $item;
+
+        return $this;
+    }
+
+    public function setCurrency(CurrencyInterface $currency)
+    {
+        $this->currency = $currency;
+
+        return $this;
+    }
+
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    public function setAddress($address)
+    {
+        $this->address = $address;
+
+        return $this;
+    }
+
+    public function setCity($city)
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
+    public function setState($state)
+    {
+        $this->state = $state;
+
+        return $this;
+    }
+
+    public function setZip($zip)
+    {
+        $this->zip = $zip;
+
+        return $this;
+    }
+
+    public function setCountry($country)
+    {
+        $this->country = $country;
+
+        return $this;
+    }
+
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    public function setPhone($phone)
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    public function setShowRate($showRate)
+    {
+        $this->showRate = $showRate;
+
+        return $this;
+    }
+
+    public function setArchived($archived)
+    {
+        $this->archived = $archived;
+
+        return $this;
     }
 }
