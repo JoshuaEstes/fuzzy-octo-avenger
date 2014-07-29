@@ -4,6 +4,6 @@ namespace Bitpay;
 
 /**
  */
-class Buyer implements BuyerInterface
+class Buyer extends User
 {
 }
