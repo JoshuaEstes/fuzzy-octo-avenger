@@ -28,6 +28,16 @@ class AccessToken implements AccessTokenInterface
     protected $useNonce;
 
     /**
+     */
+    public function __construct()
+    {
+        /**
+         * Set various defaults for this object.
+         */
+        $this->useNonce = true;
+    }
+
+    /**
      * @param string $id
      *
      * @return AccessTokenInterface
@@ -92,6 +102,30 @@ class AccessToken implements AccessTokenInterface
      */
     public function isNonceDisabled()
     {
-        return $this->useNonce;
+        return !($this->useNonce);
+    }
+
+    /**
+     * Enable nonce usage
+     *
+     * @return AccessTokenInterface
+     */
+    public function nonceEnable()
+    {
+        $this->useNonce = true;
+
+        return $this;
+    }
+
+    /**
+     * Disable nonce usage
+     *
+     * @return AccessTokenInterface
+     */
+    public function nonceDisable()
+    {
+        $this->useNonce = false;
+
+        return $this;
     }
 }
