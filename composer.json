@@ -9,6 +9,10 @@
         }
     },
     "require": {
+        "ext-php": ">=5.3",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-gmp": "*",
         "psr/log": "~1.0"
     },
     "require-dev": {
