@@ -126,6 +126,13 @@ class Invoice implements InvoiceInterface
      */
     public function getItem()
     {
+        // If there is not an item already set, we need to use a default item
+        // so that some methods do not throw errors about methods and
+        // non-objects.
+        if (null == $this->item) {
+            $this->item = new Item();
+        }
+
         return $this->item;
     }
 
@@ -134,6 +141,11 @@ class Invoice implements InvoiceInterface
      */
     public function getBuyer()
     {
+        // Same logic as getItem method
+        if (null == $this->buyer) {
+            $this->buyer = new Buyer();
+        }
+
         return $this->buyer;
     }
 
@@ -278,7 +290,10 @@ class Invoice implements InvoiceInterface
      */
     public function getBuyerName()
     {
-        return $this->getBuyer()->getName();
+        $firstName = $this->getBuyer()->getFirstName();
+        $lastName  = $this->getBuyer()->getLastName();
+
+        return trim($firstName . ' ' . $lastName);
     }
 
     /**
@@ -330,7 +345,7 @@ class Invoice implements InvoiceInterface
      */
     public function getBuyerCountry()
     {
-        return $this->getBuer()->getCountry();
+        return $this->getBuyer()->getCountry();
     }
 
     /**

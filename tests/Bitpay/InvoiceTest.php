@@ -32,7 +32,7 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
 
     public function testGetItem()
     {
-        $this->assertNull($this->invoice->getItem());
+        $this->assertInstanceOf('Bitpay\ItemInterface', $this->invoice->getItem());
     }
 
     public function testSetItem()
@@ -41,7 +41,7 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
 
     public function testGetBuyer()
     {
-        $this->assertNull($this->invoice->getBuyer());
+        $this->assertInstanceOf('Bitpay\BuyerInterface', $this->invoice->getBuyer());
     }
 
     public function testSetBuyer()
@@ -172,7 +172,7 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
 
     public function testGetItemDesc()
     {
-        //$this->assertNull($this->invoice->getItemDesc());
+        $this->assertNull($this->invoice->getItemDesc());
     }
 
     public function testSetItemDesc()
@@ -181,7 +181,7 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
 
     public function testGetItemCode()
     {
-        //$this->assertNull($this->invoice->getItemCode());
+        $this->assertNull($this->invoice->getItemCode());
     }
 
     public function testSetItemCode()
@@ -190,12 +190,12 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
 
     public function testIsPhysical()
     {
-        //$this->assertNull($this->invoice->isPhysical());
+        $this->assertFalse($this->invoice->isPhysical());
     }
 
     public function testGetBuyerName()
     {
-        //$this->assertNull($this->invoice->getBuyerName());
+        $this->assertEmpty($this->invoice->getBuyerName());
     }
 
     public function testSetBuyerName()
@@ -204,7 +204,7 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
 
     public function testGetBuyerAddress1()
     {
-        //$this->assertNull($this->invoice->getBuyerAddress1());
+        $this->assertNull($this->invoice->getBuyerAddress1());
     }
 
     public function testSetBuyerAddress1()
@@ -213,7 +213,7 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
 
     public function testGetBuyerAddress2()
     {
-        //$this->assertNull($this->invoice->getBuyerAddress2());
+        $this->assertNull($this->invoice->getBuyerAddress2());
     }
 
     public function testSetBuyerAddress2()
@@ -222,7 +222,7 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
 
     public function testGetBuyerCity()
     {
-        //$this->assertNull($this->invoice->getBuyerCity());
+        $this->assertNull($this->invoice->getBuyerCity());
     }
 
     public function testSetBuyerCity()
@@ -231,7 +231,7 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
 
     public function testGetBuyerState()
     {
-        //$this->assertNull($this->invoice->getBuyerState());
+        $this->assertNull($this->invoice->getBuyerState());
     }
 
     public function testSetBuyerState()
@@ -240,7 +240,7 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
 
     public function testGetBuyerZip()
     {
-        //$this->assertNull($this->invoice->getBuyerZip());
+        $this->assertNull($this->invoice->getBuyerZip());
     }
 
     public function testSetBuyerZip()
@@ -249,7 +249,7 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
 
     public function testGetBuyerCountry()
     {
-        //$this->assertNull($this->invoice->getBuyerCountry());
+        $this->assertNull($this->invoice->getBuyerCountry());
     }
 
     public function testSetBuyerCountry()
@@ -258,7 +258,7 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
 
     public function testGetBuyerEmail()
     {
-        //$this->assertNull($this->invoice->getBuyerEmail());
+        $this->assertNull($this->invoice->getBuyerEmail());
     }
 
     public function testSetBuyerEmail()
@@ -267,10 +267,20 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
 
     public function testGetBuyerPhone()
     {
-        //$this->assertNull($this->invoice->getBuyerPhone());
+        $this->assertNull($this->invoice->getBuyerPhone());
     }
 
     public function testSetBuyerPhone()
     {
+    }
+
+    private function getMockItem()
+    {
+        return $this->getMock('Bitpay\ItemIterface');
+    }
+
+    private function getMockBuyer()
+    {
+        return $this->getMock('Bitpay\BuyerInterface');
     }
 }

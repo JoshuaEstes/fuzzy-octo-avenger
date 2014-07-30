@@ -48,6 +48,11 @@ class User implements UserInterface
     protected $zip;
 
     /**
+     * @var string
+     */
+    protected $country;
+
+    /**
      * @inheritdoc
      */
     public function getPhone()
@@ -203,6 +208,26 @@ class User implements UserInterface
     public function setZip($zip)
     {
         $this->zip = $zip;
+
+        return $this;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * @param string $country
+     *
+     * @return UserInterface
+     */
+    public function setCountry($country)
+    {
+        $this->country = $country;
 
         return $this;
     }

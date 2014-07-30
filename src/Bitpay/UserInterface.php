@@ -48,4 +48,9 @@ interface UserInterface
      * @return string
      */
     public function getZip();
+
+    /**
+     * @return string
+     */
+    public function getCountry();
 }
