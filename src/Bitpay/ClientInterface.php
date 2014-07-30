@@ -19,39 +19,39 @@ interface ClientInterface
     const NAME    = 'BitPay PHP-Client';
     const VERSION = '0.0.0';
 
-    public function createApplication(ApplicationInterface $application);
+    //public function createApplication(ApplicationInterface $application);
 
-    public function createBill(BillInterface $bill);
-    public function getBills($status = null);
-    public function getBill($billId);
-    public function updateBill(BillInterface $bill);
+    //public function createBill(BillInterface $bill);
+    //public function getBills($status = null);
+    //public function getBill($billId);
+    //public function updateBill(BillInterface $bill);
 
-    public function createAccessToken(AccessTokenInterface $accessToken);
-    public function getAccessTokens();
-    public function getAccessToken($keyId);
+    //public function createAccessToken(AccessTokenInterface $accessToken);
+    //public function getAccessTokens();
+    //public function getAccessToken($keyId);
 
-    public function getCurrencies();
+    //public function getCurrencies();
 
     public function createInvoice(InvoiceInterface $invoice);
-    public function getInvoices();
-    public function getInvoice($invoiceId);
+    //public function getInvoices();
+    //public function getInvoice($invoiceId);
 
-    public function getLedgers();
-    public function getLedger(CurrencyInterface $currency);
+    //public function getLedgers();
+    //public function getLedger(CurrencyInterface $currency);
 
-    public function getOrgs();
-    public function getOrg($orgId);
-    public function updateOrg(OrgInterface $org);
+    //public function getOrgs();
+    //public function getOrg($orgId);
+    //public function updateOrg(OrgInterface $org);
 
-    public function createPayout(PayoutInterface $payout);
-    public function getPayouts($status = null);
-    public function getPayout($payoutId);
-    public function updatePayout(PayoutInterface $payout);
+    //public function createPayout(PayoutInterface $payout);
+    //public function getPayouts($status = null);
+    //public function getPayout($payoutId);
+    //public function updatePayout(PayoutInterface $payout);
 
-    public function getRates(CurrencyInterface $currency = null);
+    //public function getRates(CurrencyInterface $currency = null);
 
-    public function getTokens();
+    //public function getTokens();
 
-    public function getUser();
-    public function updateUser(UserInterface $user);
+    //public function getUser();
+    //public function updateUser(UserInterface $user);
 }
