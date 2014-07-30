@@ -13,6 +13,8 @@ interface ClientInterface
     /**
      * These can be changed/updated so when the request is sent to BitPay it
      * gives insight into what is making the calls.
+     *
+     * @see RFC2616 section 14.43 for User-Agent Format
      */
     const NAME    = 'BitPay PHP-Client';
     const VERSION = '0.0.0';
