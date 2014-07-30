@@ -110,7 +110,7 @@ class Invoice implements InvoiceInterface
      */
     public function getPrice()
     {
-        return $this->price;
+        return $this->getItem()->getPrice();
     }
 
     /**
@@ -120,7 +120,7 @@ class Invoice implements InvoiceInterface
      */
     public function setPrice($price)
     {
-        $this->price = $price;
+        $this->getItem()->setPrice($price);
 
         return $this;
     }
