@@ -114,11 +114,35 @@ class Invoice implements InvoiceInterface
     }
 
     /**
+     * @param float $price
+     *
+     * @return InvoiceInterface
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    /**
      * @inheritdoc
      */
     public function getCurrency()
     {
         return $this->currency;
+    }
+
+    /**
+     * @param CurrencyInterface $currency
+     *
+     * @return InvoiceInterface
+     */
+    public function setCurrency(CurrencyInterface $currency)
+    {
+        $this->currency = $currency;
+
+        return $this;
     }
 
     /**
@@ -137,6 +161,18 @@ class Invoice implements InvoiceInterface
     }
 
     /**
+     * @param ItemInterface $item
+     *
+     * @return InvoiceInterface
+     */
+    public function setItem(ItemInterface $item)
+    {
+        $this->item = $item;
+
+        return $this;
+    }
+
+    /**
      * @inheritdoc
      */
     public function getBuyer()
@@ -150,11 +186,35 @@ class Invoice implements InvoiceInterface
     }
 
     /**
+     * @param BuyerInterface $buyer
+     *
+     * @return InvoiceInterface
+     */
+    public function setBuyer(BuyerInterface $buyer)
+    {
+        $this->buyer = $buyer;
+
+        return $this;
+    }
+
+    /**
      * @inheritdoc
      */
     public function getTransactionSpeed()
     {
         return $this->transactionSpeed;
+    }
+
+    /**
+     * @param string $transactionSpeed
+     *
+     * @return InvoiceInterface
+     */
+    public function setTransactionSpeed($transactionSpeed)
+    {
+        $this->transactionSpeed = $transactionSpeed;
+
+        return $this;
     }
 
     /**
@@ -166,11 +226,35 @@ class Invoice implements InvoiceInterface
     }
 
     /**
+     * @param string $notificationEmail
+     *
+     * @return InvoiceInterface
+     */
+    public function setNotificationEmail($notificationEmail)
+    {
+        $this->notificationEmail = $notificationEmail;
+
+        return $this;
+    }
+
+    /**
      * @inheritdoc
      */
     public function getNotificationUrl()
     {
         return $this->notificationUrl;
+    }
+
+    /**
+     * @param string $notificationUrl
+     *
+     * @return InvoiceInterface
+     */
+    public function setNotificationurl($notificationUrl)
+    {
+        $this->notificationUrl = $notificationUrl;
+
+        return $this;
     }
 
     /**
@@ -182,6 +266,18 @@ class Invoice implements InvoiceInterface
     }
 
     /**
+     * @param string $redirectUrl
+     *
+     * @return InvoiceInterface
+     */
+    public function setRedirectUrl($redirectUrl)
+    {
+        $this->redirectUrl = $redirectUrl;
+
+        return $this;
+    }
+
+    /**
      * @inheritdoc
      */
     public function getPosData()
@@ -190,11 +286,35 @@ class Invoice implements InvoiceInterface
     }
 
     /**
+     * @param array|object $posData
+     *
+     * @return InvoiceInterface
+     */
+    public function setPosData($posData)
+    {
+        $this->posData = $posData;
+
+        return $this;
+    }
+
+    /**
      * @inheritdoc
      */
     public function getStatus()
     {
         return $this->status;
+    }
+
+    /**
+     * @param string $status
+     *
+     * @return InvoiceInterface
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
     }
 
     /**
@@ -214,11 +334,35 @@ class Invoice implements InvoiceInterface
     }
 
     /**
+     * @param string $id
+     *
+     * @return InvoiceInterface
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    /**
      * @inheritdoc
      */
     public function getUrl()
     {
         return $this->url;
+    }
+
+    /**
+     * @param string $url
+     *
+     * @return InvoiceInterface
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+
+        return $this;
     }
 
     /**
@@ -230,11 +374,35 @@ class Invoice implements InvoiceInterface
     }
 
     /**
+     * @param float $btcPrice
+     *
+     * @return InvoiceInterface
+     */
+    public function setBtcPrice($btcPrice)
+    {
+        $this->btcPrice = $btcPrice;
+
+        return $this;
+    }
+
+    /**
      * @inheritdoc
      */
     public function getInvoiceTime()
     {
         return $this->invoiceTime;
+    }
+
+    /**
+     * @param DateTime $invoiceTime
+     *
+     * @return InvoiceInterface
+     */
+    public function setInvoiceTime($invoiceTime)
+    {
+        $this->invoiceTime = $invoiceTime;
+
+        return $this;
     }
 
     /**
@@ -246,6 +414,18 @@ class Invoice implements InvoiceInterface
     }
 
     /**
+     * @param DateTime $expirationTime
+     *
+     * return InvoiceInterface
+     */
+    public function setExpirationTime($expirationTime)
+    {
+        $this->expirationTime = $expirationTime;
+
+        return $this;
+    }
+
+    /**
      * @inheritdoc
      */
     public function getCurrentTime()
@@ -254,11 +434,35 @@ class Invoice implements InvoiceInterface
     }
 
     /**
+     * @param DateTime $currentTime
+     *
+     * @return InvoiceInterface
+     */
+    public function setCurrentTime($currentTime)
+    {
+        $this->currentTime = $currentTime;
+
+        return $this;
+    }
+
+    /**
      * @inheritdoc
      */
     public function getOrderId()
     {
         return $this->orderId;
+    }
+
+    /**
+     * @param string $orderId
+     *
+     * @return InvoiceInterface
+     */
+    public function setOrderId($orderId)
+    {
+        $this->orderId = $orderId;
+
+        return $this;
     }
 
     /**

@@ -127,4 +127,18 @@ class UserTest extends \PHPUnit_Framework_TestCase
         $this->user->setZip('37379');
         $this->assertSame('37379', $this->user->getZip());
     }
+
+    public function testGetCountry()
+    {
+        $this->assertNull($this->user->getCountry());
+    }
+
+    /**
+     * @depends testGetCountry
+     */
+    public function testSetCountry()
+    {
+        $this->user->setCountry('US');
+        $this->assertSame('US', $this->user->getCountry());
+    }
 }
