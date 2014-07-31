@@ -1,8 +1,10 @@
 <?php
 
+namespace Bitpay;
+
 /**
  */
-interface Bitpay_UserInterface
+interface UserInterface
 {
 
     /**
@@ -46,4 +48,9 @@ interface Bitpay_UserInterface
      * @return string
      */
     public function getZip();
+
+    /**
+     * @return string
+     */
+    public function getCountry();
 }

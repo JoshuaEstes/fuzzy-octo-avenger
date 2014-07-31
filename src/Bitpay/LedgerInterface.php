@@ -1,9 +1,11 @@
 <?php
 
+namespace Bitpay;
+
 /**
  * Ledger Record
  */
-interface Bitpay_LedgerInterface
+interface LedgerInterface
 {
 
     const CODE_1000 = 'sale';
@@ -14,7 +16,7 @@ interface Bitpay_LedgerInterface
     const SOURCE_BITCOIN_TX = 'bitcoinTx';
 
     /**
-     * @return Bitpay_CurrencyInterface
+     * @return CurrencyInterface
      */
     public function getCurrency();
 
@@ -64,12 +66,12 @@ interface Bitpay_LedgerInterface
     public function getExRates();
 
     /**
-     * @return Bitpay_BuyerInterface
+     * @return BuyerInterface
      */
     public function getBuyer();
 
     /**
-     * @return Bitpay_InvoiceInterface
+     * @return InvoiceInterface
      */
     public function getInvoice();
 

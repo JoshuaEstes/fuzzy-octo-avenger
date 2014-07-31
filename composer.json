@@ -1,0 +1,26 @@
+{
+    "name": "bitpay/new-api-php-client",
+    "description": "PHP Library to work with the new Bitpay API",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-gmp": "*",
+        "ext-openssl": "*",
+        "psr/log": "~1.0"
+    },
+    "require-dev": {
+        "phing/phing": "*",
+        "phpunit/phpunit": "*"
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}

@@ -1,17 +1,25 @@
 <?php
 
+namespace Bitpay;
+
 /**
  * Item that was sold
  */
-interface Bitpay_ItemInterface
+interface ItemInterface
 {
 
     /**
+     * Used to display an item SKU code or part number to the buyer. Maximum string
+     * length is 100 characters.
+     *
      * @return string
      */
-    public function getItemCode();
+    public function getCode();
 
     /**
+     * Used to display an item description to the buyer. Maximum string length is 100
+     * characters.
+     *
      * @return string
      */
     public function getDescription();
@@ -27,6 +35,10 @@ interface Bitpay_ItemInterface
     public function getQuantity();
 
     /**
+     * default value: false
+     * ● true: Indicates a physical item will be shipped (or picked up)
+     * ● false: Indicates that nothing is to be shipped for this order
+     *
      * @return boolean
      */
     public function isPhysical();

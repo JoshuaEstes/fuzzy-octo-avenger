@@ -1,8 +1,21 @@
 <?php
 
-interface Bitpay_ConfigInterface
+namespace Bitpay;
+
+/**
+ */
+interface ConfigInterface
 {
 
+    /**
+     * @param string $key
+     * @param mixed  $value
+     */
     public function set($key, $value);
-    public function get($key);
+
+    /**
+     * @param string $key
+     * @param mixed  $default
+     */
+    public function get($key, $default = null);
 }

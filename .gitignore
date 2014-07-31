@@ -1,0 +1,6 @@
+/bin/
+/build/cache/
+/build/docs/
+/vendor/
+composer.lock
+composer.phar

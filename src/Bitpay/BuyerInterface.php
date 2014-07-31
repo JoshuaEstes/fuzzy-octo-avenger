@@ -1,5 +1,9 @@
 <?php
 
-interface Bitpay_BuyerInterface extends Bitpay_UserInterface
+namespace Bitpay;
+
+/**
+ */
+interface BuyerInterface extends UserInterface
 {
 }

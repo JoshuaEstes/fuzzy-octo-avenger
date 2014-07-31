@@ -1,5 +1,7 @@
 <?php
 
+namespace Bitpay;
+
 /**
  * Creates an application for a new merchant account
  */

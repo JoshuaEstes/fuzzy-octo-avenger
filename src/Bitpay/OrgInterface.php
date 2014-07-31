@@ -1,8 +1,10 @@
 <?php
 
+namespace Bitpay;
+
 /**
  */
-interface Bitpay_OrgInterface
+interface OrgInterface
 {
 
     /**

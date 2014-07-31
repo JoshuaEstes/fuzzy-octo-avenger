@@ -1,9 +1,11 @@
 <?php
 
+namespace Bitpay;
+
 /**
  * Creates an access token for the given client
  */
-interface Bitpay_AccessTokenInterface
+interface AccessTokenInterface
 {
 
     /**
