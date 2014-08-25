@@ -2,6 +2,9 @@
 
 namespace Bitpay\Precisionmath;
 
+/**
+ * Every math strategy must implement this interface
+ */
 interface StrategyInterface
 {
 
