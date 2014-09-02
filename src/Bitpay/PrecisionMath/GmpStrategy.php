@@ -13,14 +13,39 @@ class GmpStrategy implements StrategyInterface
     {
         return gmp_intval($a);
     }
-    public static function compare($a, $b) {}
-    public static function divide($a, $b) {}
-    public static function modulus($a, $b) {}
-    public static function inverse($a, $b) {}
-    public static function multiply($a, $b) {}
+
+    public static function compare($a, $b)
+    {
+        return gmp_cmp($a, $b);
+    }
+
+    public static function divide($a, $b)
+    {
+        return gmp_div($a, $b);
+    }
+
+    public static function modulus($a, $b)
+    {
+        return gmp_mod($a, $b);
+    }
+
+    public static function inverse($a, $b)
+    {
+        return gmp_invert($a, $b);
+    }
+
+    public static function multiply($a, $b)
+    {
+        return gmp_mul($a, $b);
+    }
+
     public static function add($a, $b)
     {
         return gmp_add($a, $b);
     }
-    public static function subtract($a, $b) {}
+
+    public static function subtract($a, $b)
+    {
+        return gmp_sub($a, $b);
+    }
 }
