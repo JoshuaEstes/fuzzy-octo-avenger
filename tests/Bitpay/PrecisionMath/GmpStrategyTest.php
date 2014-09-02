@@ -18,12 +18,15 @@ class GmpStrategyTest extends \PHPUnit_Framework_TestCase
         $result = $context::add(1, 1);
 
         // GMP Resource
-        var_dump($result);
+        //var_dump($result);
+        $this->assertTrue(is_resource($result));
 
         // "2"
-        var_dump($context::toString($result));
+        //var_dump($context::toString($result));
+        $this->assertInternalType('string', $context::toString($result));
 
         // 2
-        var_dump($context::toInteger($result));
+        //var_dump($context::toInteger($result));
+        $this->assertInternalType('integer', $context::toInteger($result));
     }
 }
